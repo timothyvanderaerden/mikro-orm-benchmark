@@ -1,0 +1,16 @@
+{
+  "name": "typeorm-bench",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc && node --expose-gc perf"
+  },
+  "dependencies": {
+    "@types/node": "^14.0.27",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^5.0.0",
+    "typeorm": "^0.2.25",
+    "typescript": "3.9.7"
+  }
+}
