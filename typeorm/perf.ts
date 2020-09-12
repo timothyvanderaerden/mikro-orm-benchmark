@@ -66,7 +66,7 @@ export class User {
         user.id2 = i;
         user.ready = true;
         user.priority = 5;
-        orm.getRepository(User).save(user);
+        await orm.getRepository(User).save(user);
       }
     });
 
