@@ -10,7 +10,7 @@
     "@types/node": "^14.0.27",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.0",
-    "typeorm": "^0.2.25",
+    "typeorm": "^0.2.26",
     "typescript": "3.9.7"
   }
 }

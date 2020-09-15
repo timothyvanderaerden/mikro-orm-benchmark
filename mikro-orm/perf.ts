@@ -3,7 +3,7 @@ import { Entity, MikroORM, PrimaryKey, Property } from '@mikro-orm/core';
 import { performance } from 'perf_hooks';
 import { SqliteDriver } from '@mikro-orm/sqlite';
 
-let total = 0;
+const total = { all: 0, find: 0, insert: 0, update: 0, remove: 0 };
 
 export async function bench(times: number, title: string, exec: () => void | Promise<void>) {
   const start = performance.now();
@@ -11,7 +11,8 @@ export async function bench(times: number, title: string, exec: () => void | Pro
     await exec();
   }
   const took = performance.now() - start;
-  total += took;
+  total.all += took;
+  total[title] += took;
 
   // global.gc();
   process.stdout.write([
@@ -97,5 +98,9 @@ export class User {
   }
 
   await orm.close();
-  console.log('total (avg per round)', total / rounds);
+  console.log('total (avg per round) ', total.all / rounds);
+  console.log('insert (avg per round)', total.insert / rounds);
+  console.log('find (avg per round)  ', total.find / rounds);
+  console.log('update (avg per round)', total.update / rounds);
+  console.log('remove (avg per round)', total.remove / rounds);
 })();

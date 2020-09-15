@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@mikro-orm/core@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@mikro-orm/core/-/core-4.0.2.tgz#90e30eacd23ef58f2f6bd88d3a299d63027a1f8b"
-  integrity sha512-X2IZaWJLRrYgohI4mZsDaKZMR17AvKAEtRpCdc4f3b+CGyjzVCk5qXQHvJnA85EdvwGW/gDQBiBjx4WtwY77gw==
+"@mikro-orm/core@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@mikro-orm/core/-/core-4.0.3.tgz#f891023f2523d20fd81f40e2ecddd457ba5997b7"
+  integrity sha512-PvsH8U7w5U/ZjUnnOLtW9C19JQGcGaQx1camrem2XzgdlJxT7eAdLLeHfbJnAAk2399lAa3wSKmqxELwKMjETw==
   dependencies:
     ansi-colors "^4.1.1"
     clone "^2.1.2"
@@ -15,22 +15,21 @@
     globby "^11.0.1"
     reflect-metadata "^0.1.13"
     strip-json-comments "^3.1.1"
-    uuid "^8.3.0"
 
-"@mikro-orm/knex@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@mikro-orm/knex/-/knex-4.0.2.tgz#0efc29b4705d2579d0ef4b2190faba8280a18413"
-  integrity sha512-alSTkQS4XxXM1mKA2ENIHyXi2bNnQ3s8LTlmuKzfSW0/Ot8GncAgoSFUlsdRAB5wUvEnH3y4xezUZRTgs6daBg==
+"@mikro-orm/knex@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@mikro-orm/knex/-/knex-4.0.3.tgz#71d28c8b9529d63444963906b72c40c4e97bd638"
+  integrity sha512-W/nmhynVKzcvOsNwyL1ab+R3JbNrnDmxlIOmpU7F4qkBKw7B1USV/7NNKbUSXwCei1fM4PUiSC5aFKCfE9/ClQ==
   dependencies:
     fs-extra "^9.0.1"
     knex "^0.21.1"
 
-"@mikro-orm/sqlite@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@mikro-orm/sqlite/-/sqlite-4.0.2.tgz#23b2aea3289de1739431ff1b51bfccc33770b112"
-  integrity sha512-cWQ44ZIt1q9GfB0b2K/2d6TexN9RBPmb2RiQlwWpJa0zWg9o885Z+RLamG3JrgVvGW0vUC+mto5Y6elJdgaDHg==
+"@mikro-orm/sqlite@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@mikro-orm/sqlite/-/sqlite-4.0.3.tgz#e2b1f86bf8a1e701ba46ded54653f735440acc68"
+  integrity sha512-4u4pbCYgguroglZHPWADdY0yEy3OXflJegTiJgL3Se+381xV3Dd+iqwWiUU/3kd01DSAsbQFHTllijlgA04dhw==
   dependencies:
-    "@mikro-orm/knex" "^4.0.2"
+    "@mikro-orm/knex" "^4.0.3"
     fs-extra "^9.0.1"
     sqlite3 "^4.2.0"
 
@@ -1632,11 +1631,6 @@ uuid@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
   integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
-
-uuid@^8.3.0:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
-  integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
 
 v8flags@^3.2.0:
   version "3.2.0"
