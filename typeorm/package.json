@@ -7,10 +7,10 @@
     "start": "tsc && node --expose-gc perf"
   },
   "dependencies": {
-    "@types/node": "^14.0.27",
+    "@types/node": "^14.11.8",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.0",
-    "typeorm": "^0.2.26",
-    "typescript": "3.9.7"
+    "typeorm": "^0.2.28",
+    "typescript": "4.0.3"
   }
 }
