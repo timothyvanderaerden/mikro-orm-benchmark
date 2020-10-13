@@ -81,7 +81,7 @@ export class MongoUser {
     case 'mysql': Object.assign(config, { dbName: 'mikro_orm_bench', type: 'mysql', port: 3307 }); break;
     case 'pg': Object.assign(config, { dbName: 'mikro_orm_bench', type: 'postgresql' }); break;
     case 'mariadb': Object.assign(config, { dbName: 'mikro_orm_bench', type: 'mariadb', port: 3309 }); break;
-    case 'mongo': Object.assign(config, { dbName: 'mikro_orm_bench', type: 'mongo', entities: [MongoUser] }); break;
+    case 'mongo': Object.assign(config, { dbName: 'mikro_orm_bench', type: 'mongo', batchSize: 1000, entities: [MongoUser] }); break;
     default: throw new Error(`Wrong type provided: '${type}'`);
   }
 
@@ -126,6 +126,7 @@ export class MongoUser {
       await orm.em.flush();
     });
 
+    items.forEach(i => orm.em.remove(i));
     await bench(j, 'remove', async () => {
       await orm.em.flush();
     });
