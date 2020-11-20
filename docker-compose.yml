@@ -2,7 +2,6 @@ version: "3.4"
 
 services:
   mongo:
-    container_name: mongo
     image: mongo:4.4
     ports:
       - 27017:27017
@@ -36,9 +35,21 @@ services:
       - postgre:/var/lib/postgresql/data
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_DB: pg_bench
+
+  yugabytedb:
+    image: yugabytedb/yugabyte:latest
+    entrypoint: ["yugabyted", "start", "--daemon=false", "--callhome=false"]
+    ulimits:
+      nofile: 64000
+    ports:
+      - 5433:5433
+    volumes:
+      - yugabytedb:/home/yugabyte/var
 
 volumes:
   mysql:
   mongo:
   mariadb:
   postgre:
+  yugabytedb:

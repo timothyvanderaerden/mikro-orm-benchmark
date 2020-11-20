@@ -82,6 +82,7 @@ export class MongoUser {
     case 'pg': Object.assign(config, { dbName: 'mikro_orm_bench', type: 'postgresql' }); break;
     case 'mariadb': Object.assign(config, { dbName: 'mikro_orm_bench', type: 'mariadb', port: 3309 }); break;
     case 'mongo': Object.assign(config, { dbName: 'mikro_orm_bench', type: 'mongo', batchSize: 1000, entities: [MongoUser] }); break;
+    case 'yb': Object.assign(config, { dbName: 'mikro_orm_bench', type: 'postgresql', port: 5433 }); break;
     default: throw new Error(`Wrong type provided: '${type}'`);
   }
 
